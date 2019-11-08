@@ -16,6 +16,8 @@ export class ComponentBComponent implements OnInit {
   variableA$: Observable<number>;
   variableB$: Observable<number>;
 
+  timeout: any;
+
   constructor(private store: Store<AppState>) { 
     this.variableA$ = this.store.select(variableASelector);
     this.variableB$ = this.store.select(variableBSelector);
@@ -29,7 +31,17 @@ export class ComponentBComponent implements OnInit {
   }
 
   start(){
-    this.store.dispatch(new Change());
-    setTimeout(() => { this.start() }, 1000);
+
+    this.timeout = setTimeout(() => { 
+      this.store.dispatch(new Change());
+      this.start();
+    }, 1000);
+  }
+
+  onStop(){
+    if(this.timeout){
+      clearTimeout(this.timeout);
+      this.timeout = null;
+    }
   }
 }
