@@ -1,7 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { FeatureAState } from '../states/featurea.state';
 
-export const name = 'featurea';
+export const name = 'featureAState';
 export const featureAStateSelector = createFeatureSelector<FeatureAState>(name);
 
 export const variableASelector = createSelector(

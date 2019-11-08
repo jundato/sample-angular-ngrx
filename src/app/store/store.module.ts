@@ -7,10 +7,13 @@ import { environment } from '../../environments/environment';
 
 
 import { reducers } from '.';
+import { EffectsModule } from '@ngrx/effects';
+import { FeatureAEffects } from './effects/featurea.effects';
 
 @NgModule({
     imports  : [
         StoreModule.forRoot(reducers),
+        EffectsModule.forRoot([FeatureAEffects]),
         !environment.production ? StoreDevtoolsModule.instrument() : [],
     ],
     providers: []

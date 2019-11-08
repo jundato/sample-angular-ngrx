@@ -8,17 +8,20 @@ import { StoreModule } from '@ngrx/store';
 import { AppStoreModule } from './store/store.module';
 import { ComponentAComponent } from './components/component-a/component-a.component';
 import { ContainerComponent } from './pages/container/container.component';
+import { ComponentBComponent } from './components/component-b/component-b.component';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
     AppComponent,
     ComponentAComponent,
-    ContainerComponent
+    ContainerComponent,
+    ComponentBComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppStoreModule
+    AppStoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

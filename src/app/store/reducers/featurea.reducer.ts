@@ -15,12 +15,12 @@ export function featureAReducer(
             return {
                 ...state,
                 variableA: state.variableA + 1
-            }
+            };
         case actions.DECREASE:
             return {
-                    ...state,
-                    variableA: state.variableA + 1
-            }
+                ...state,
+                variableB: state.variableB - 1
+            };
         default:
             return state;
     }
