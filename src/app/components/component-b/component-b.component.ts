@@ -4,7 +4,7 @@ import { AppState } from 'src/app/store/states';
 import { Observable } from 'rxjs';
 import { variableASelector, variableBSelector } from 'src/app/store/selectors/store.selector';
 import { Action } from 'rxjs/internal/scheduler/Action';
-import { Change } from 'src/app/store/actions/featurea.action';
+import { Change, Reset } from 'src/app/store/actions/featurea.action';
 
 @Component({
   selector: 'app-component-b',
@@ -43,5 +43,9 @@ export class ComponentBComponent implements OnInit {
       clearTimeout(this.timeout);
       this.timeout = null;
     }
+  }
+
+  onReset(){
+    this.store.dispatch(new Reset());
   }
 }

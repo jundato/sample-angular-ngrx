@@ -15,7 +15,13 @@ export class Decrease implements Action {
     readonly type = DECREASE;
 }
 
+export const RESET = '[featureA] reset';
+export class Reset implements Action {
+    readonly type = RESET;
+}
+
 export type Actions =
     | Change
     | Increase
     | Decrease
+    | Reset

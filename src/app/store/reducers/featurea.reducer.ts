@@ -21,6 +21,10 @@ export function featureAReducer(
                 ...state,
                 variableB: state.variableB - 1
             };
+        case actions.RESET:
+            return {
+                ...initialState
+            }
         default:
             return state;
     }
