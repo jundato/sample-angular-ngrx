@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
 import { AppStoreModule } from './store/store.module';
+import { ComponentAComponent } from './components/component-a/component-a.component';
+import { ContainerComponent } from './pages/container/container.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ComponentAComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,

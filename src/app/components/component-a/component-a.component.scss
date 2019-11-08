@@ -1,0 +1,10 @@
+.variable{
+    border: 1px solid;
+    padding: 10px;
+    &.less-than-zero{
+        border-color: red;
+    }
+    &.greater-than-zero{
+        border-color: blue;
+    }
+}
